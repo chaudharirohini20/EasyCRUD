@@ -8,7 +8,7 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.2-jdk
 
-COPY --from=build target/student-registration-backend-0.0.1-SNAPSHOT.jar /opt/studentapp.jar
+COPY --from=build /opt/target/student-registration-backend-0.0.1-SNAPSHOT.jar /opt/studentapp.jar
 
 EXPOSE 8080
 
