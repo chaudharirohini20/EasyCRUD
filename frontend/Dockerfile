@@ -10,7 +10,7 @@ FROM httpd:latest
 
 # RUN apk add apache2
 
-COPY --from=build dist/ htdocs/ 
+COPY --from=build /opt/dist/ htdocs/ 
 
 # RUN cp -rf dist/* /var/www/localhost/htdocs/
 

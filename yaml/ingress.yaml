@@ -17,3 +17,11 @@ spec:
             name: studentapp-svc
             port: 
               number: 8080
+
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: studentapp-frontend-svc
+            port: 
+              number: 80
